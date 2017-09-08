@@ -1,4 +1,5 @@
 # Plurk API
+![PyPi](https://img.shields.io/pypi/v/plurk-api.svg)
 
 This provides a simple OAuth wrapper for [Plurk 2.0 API](https://www.plurk.com/API#/APP/Timeline/getUnreadPlurks). Note that this is **NOT** a full wrapper of the API.
 
