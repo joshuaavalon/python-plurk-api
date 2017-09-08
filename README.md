@@ -14,7 +14,7 @@ pip install plurk-api
 
 ### Get user access token
 ```python
-from plurk-api import PlurkOAuthApi
+from plurk_api import PlurkOAuthApi
 
 
 api = PlurkOAuthApi("<App Key>", "<App Sercet>")
@@ -28,7 +28,7 @@ access_token = api.access_token(request_token, "<verifier>")
 
 ### Access API
 ```python
-from plurk-api import PlurkApi
+from plurk_api import PlurkApi
 
 
 api = PlurkApi("<App Key>", "<App Sercet>", access_token["oauth_token"], access_token["oauth_token_secret"])
@@ -36,4 +36,4 @@ response = api.request("/APP/Profile/getPublicProfile", {"user_id": 12345})
 ```
 
 ## API Documentation
-Documentation is avaiable [here](https://www.plurk.com/API).
+Documentation is available [here](https://www.plurk.com/API).
