@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name="plurk-api",
@@ -11,5 +11,7 @@ setup(
     download_url="https://github.com/joshuaavalon/python-plurk-api/archive/1.0.0.tar.gz",
     keywords=["plurk", "oauth"],
     classifiers=[],
+    license="MIT",
+    python_requires=">=3",
     requires=["oauth2"]
 )
