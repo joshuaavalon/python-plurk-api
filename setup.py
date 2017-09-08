@@ -7,7 +7,7 @@ setup(
     description="Plurk API",
     author="Joshua Avalon",
     author_email="joshuaavalon@gmail.com",
-    url="https://github.com/joshuaavalon/python-plurk_api",
+    url="https://github.com/joshuaavalon/python-plurk-api",
     keywords=["plurk", "oauth"],
     classifiers=[],
     license="MIT",
