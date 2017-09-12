@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="plurk_api",
     packages=["plurk_api"],
-    version="2.0.0",
+    version="2.0.1",
     description="Plurk API",
     author="Joshua Avalon",
     author_email="joshuaavalon@gmail.com",
@@ -12,5 +12,5 @@ setup(
     classifiers=[],
     license="MIT",
     python_requires=">=3",
-    requires=["oauth2", "typing"]
+    install_requires=["oauth2", "typing"]
 )
