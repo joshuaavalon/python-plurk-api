@@ -1,15 +1,16 @@
-from oauth2 import Consumer, Token, Client
+from json import loads
 from typing import Union
 from urllib.parse import urlencode, urljoin, parse_qs
-from json import loads
+
+from oauth2 import Consumer, Token, Client
 
 
 class PlurkApi:
     def __init__(self, api_key: str, api_secret: str, token_key: str, token_secret: str,
-                 base_url: str = "https://www.plurk.com"):
+                 base_url: str = "https://www.plurk.com", **kwargs):
         consumer = Consumer(api_key, api_secret)  # type:Consumer
         token = Token(token_key, token_secret)  # type:Token
-        self.client = Client(consumer, token)  # type:Client
+        self.client = Client(consumer, token, **kwargs)  # type:Client
         self.base_url = base_url  # type:str
 
     def request(self, end_point: str, parameters: Union[dict, str] = None) -> dict:
@@ -25,9 +26,9 @@ class PlurkApi:
 
 
 class PlurkOAuthApi:
-    def __init__(self, api_key: str, api_secret: str, base_url: str = "https://www.plurk.com"):
+    def __init__(self, api_key: str, api_secret: str, base_url: str = "https://www.plurk.com", **kwargs):
         self.consumer = Consumer(api_key, api_secret)  # type:Consumer
-        self.client = Client(self.consumer)  # type:Client
+        self.client = Client(self.consumer, **kwargs)  # type:Client
         self.base_url = base_url  # type:str
 
     def request_token(self) -> dict:
